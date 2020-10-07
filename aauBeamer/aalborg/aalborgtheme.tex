@@ -15,10 +15,27 @@
 % Change the bar and sidebar colors:
 %\setbeamercolor{Aalborg}{fg=red!20,bg=red}
 %\setbeamercolor{sidebar}{bg=red!20}
+
+\definecolor{darkred}{RGB}{207,90,0}
+\definecolor{greyUGR}{RGB}{125,126,126}
+\definecolor{darkGrey}{RGB}{50,50,50}
+\definecolor{darkgreen}{RGB}{30,50,10}
+\definecolor{clearblue}{RGB}{97,97,255}
+
+
+\setbeamercolor{Aalborg}{fg=darkgreen!20,bg=greyUGR}
+%\setbeamercolor{sidebar}{bg=greyUGR!20}
 % Change the color of the structural elements:
-%\setbeamercolor{structure}{fg=red}
-% Change the frame title text color:
-%\setbeamercolor{frametitle}{fg=blue}
+\setbeamercolor{structure}{fg=darkgreen}
+\setbeamercolor{titlepagecolorbox}{fg=greyUGR, bg=}
+\setbeamercolor{frametitle}{fg=darkred}
+\setbeamercolor{framesubtitle}{fg=greyUGR}
+\setbeamercolor{subtitle}{fg=darkred}
+\setbeamercolor{section in toc}{fg=darkred}
+\setbeamerfont{section in toc}{series=\bfseries}
+\setbeamercolor{section in sidebar}{fg=darkred}
+\setbeamercolor{alerted text}{fg=darkred}
+\setbeamercolor{normal text}{fg=darkGrey}
 % Change the normal text color background:
 %\setbeamercolor{normal text}{bg=gray!10}
 % ... and you can of course change a lot more - see the beamer user manual.
@@ -36,47 +53,36 @@
   \href{#1}{{\usebeamercolor[bg]{Aalborg}#2}}%
 }
 
-\title[The Aalborg Beamer Theme]% optional, use only with long paper titles
-{The Aalborg Beamer Theme}
+\title[Titulo corto]% optional, use only with long paper titles
+{Titulo largo}
 
-\subtitle{v.\ 1.4.0}  % could also be a conference name
+\subtitle{Titulo conferencia
+}  % could also be a conference name
 
-\date{\today}
+\author[corresponding]{autor1\inst{1},  \underline{autor2}\inst{2}...}
 
-\author[Jesper Kjær Nielsen] % optional, use only with lots of authors
+\institute[Dept. of Signal Theory, Networking and Communications\\Universidad de Granada] % (optional)
 {
-  Jesper Kjær Nielsen
-}
-% - Give the names in the same order as they appear in the paper.
-% - Use the \inst{?} command only if the authors have different
-%   affiliation. See the beamer manual for an example
-
-\institute[
-%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
-  Audio Analysis Lab, CREATE\\
-  Aalborg University\\
-  Denmark
-] % optional - is placed in the bottom of the sidebar on every slide
-{% is placed on the bottom of the title page
-  Audio Analysis Lab, CREATE\\
-  Aalborg University\\
-  Denmark
-  
-  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+	\inst{1} Dept. of Signal Theory, Networking and Communications. Universidad de Granada, Spain\\
+	\inst{2} Department of Communications Engineering. Universidad de Malaga, Spain.
 }
 
 % specify the logo in the top right/left of the slide
-\pgfdeclareimage[height=1cm]{mainlogo}{AAUgraphics/aau_logo_new} % placed in the upper left/right corner
+\pgfdeclareimage[height=1.3cm]{mainlogo}{AAUgraphics/escudosipba} % placed in the upper left/right corner
 \logo{\pgfuseimage{mainlogo}}
 
 % specify a logo on the titlepage (you can specify additional logos an include them in 
 % institute command below
-\pgfdeclareimage[height=1.5cm]{titlepagelogo}{AAUgraphics/aau_logo_new} % placed on the title page
-%\pgfdeclareimage[height=1.5cm]{titlepagelogo2}{AAUgraphics/aau_logo_new} % placed on the title page
+\pgfdeclareimage[height=1cm]{titlepagelogo}{AAUgraphics/logoalter} % placed on the title page
+\pgfdeclareimage[height=1cm]{titlepagelogo2}{AAUgraphics/Horizontal} % placed on the title page
+
 \titlegraphic{% is placed on the bottom of the title page
   \pgfuseimage{titlepagelogo}
-%  \hspace{1cm}\pgfuseimage{titlepagelogo2}
+  \hspace{1cm}\pgfuseimage{titlepagelogo2}
 }
+
+\setbeamerfont{subtitle}{series=\itshape,size=\normalsize}
+\setbeamercolor{author}{fg=black}
 
 \begin{document}
 % the titlepage
